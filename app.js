@@ -5,15 +5,11 @@ const path = require ('path');
 
 const publicPath = path.join (__dirname , './public');
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use ( express.static (publicPath));
 
-app.listen ( 3000 , () => {
-
-    console.log ( "Servidor corriendo");
-
-});
+app.listen(port, console.log('Servidor OK en puerto ' + port));
 
 app.get ( '/home' , ( req , res ) =>{
 
